@@ -10,12 +10,12 @@ const ul = document.getElementsByTagName("ul")[0];
 
 for (let i = 0; i < messageList.length; i++) {
   ul.innerHTML += `<li id=${messageList[i].name === "user" ? "user" : ""}>
-  <h1>${messageList[i].msg}</h1></li>`;
+        ${messageList[i].msg}</li>`;
 }
 
 const message = document.getElementsByTagName("input")[0];
 function handleSend() {
-  ul.innerHTML += `<li id="user"><h1>${message.value}</h1></li>`;
+  ul.innerHTML += `<li id="user">${message.value}</li>`;
   message.value = "";
   setTimeout(() => autoReply(), 1000);
 }
@@ -29,5 +29,5 @@ function autoReply() {
     { name: "women", msg: "ap reply kion ni karty" },
   ];
   var msgNumber = Math.round(Math.random() * dummyMsgList.length);
-  ul.innerHTML += `<li><h1>${dummyMsgList[msgNumber].msg}</h1></li>`;
+  ul.innerHTML += `<li>${dummyMsgList[msgNumber].msg}</li>`;
 }

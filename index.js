@@ -28,6 +28,6 @@ function autoReply() {
     { name: "women", msg: "ap kahan rehty hain" },
     { name: "women", msg: "ap reply kion ni karty" },
   ];
-  var msgNumber = Math.round(Math.random() * dummyMsgList.length);
+  var msgNumber = Math.floor(Math.random() * dummyMsgList.length);
   ul.innerHTML += `<li>${dummyMsgList[msgNumber].msg}</li>`;
 }

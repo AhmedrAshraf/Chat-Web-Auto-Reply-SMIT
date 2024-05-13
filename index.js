@@ -15,9 +15,13 @@ for (let i = 0; i < messageList.length; i++) {
 
 const message = document.getElementsByTagName("input")[0];
 function handleSend() {
-  ul.innerHTML += `<li id="user">${message.value}</li>`;
-  message.value = "";
-  setTimeout(() => autoReply(), 1000);
+  if (message.value !== "") {
+    ul.innerHTML += `<li id="user">${message.value}</li>`;
+    message.value = "";
+    setTimeout(() => autoReply(), 500);
+  }else{
+    alert("Please Type a Message!")
+  }
 }
 
 function autoReply() {

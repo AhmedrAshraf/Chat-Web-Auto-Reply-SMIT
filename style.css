@@ -33,8 +33,10 @@ button {
   width: 18vw;
   position: absolute;
   font-size: 24px;
+  font-weight: 700;
+  border-radius: 20px;
   color: white;
-  background-color: tomato;
+  background-color: rgb(13, 246, 13);
   bottom: 7px;
   right: 15px;
 }
